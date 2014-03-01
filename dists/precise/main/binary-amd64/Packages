@@ -1,0 +1,50 @@
+Package: rfc5766-turn-server
+Version: 3.2.2.8-1~precise1
+Architecture: amd64
+Maintainer: Git Sous <gitsous@gmail.com>
+Installed-Size: 873
+Depends: libc6 (>= 2.14), libevent-core-2.0-5 (>= 2.0.16-stable), libevent-openssl-2.0-5 (>= 2.0.16-stable), libevent-pthreads-2.0-5 (>= 2.0.16-stable), libhiredis0.10 (>= 0.10.1), libmysqlclient18 (>= 5.5.13-1), libpq5 (>= 8.4~), libssl1.0.0 (>= 1.0.1), adduser
+Conflicts: turnserver
+Homepage: http://code.google.com/p/rfc5766-turn-server/
+Priority: extra
+Section: net
+Filename: pool/main/r/rfc5766-turn-server/rfc5766-turn-server_3.2.2.8-1~precise1_amd64.deb
+Size: 366834
+SHA256: 887d00ebc9d4b63fdf84372b5b84b8b748bdd90a3e4ecc26e5becf60fb81e67c
+SHA1: 361026034377bd6ea69fc93bb5997f578c711655
+MD5sum: f886938ea77131c445eed98a6c1e9dfe
+Description: TURN and STUN server for VoIP
+ STUN (Session Traversal Utilities for NAT) and TURN (Traversal Using Relays
+ around NAT) are protocols that can be used to provide NAT traversal for VoIP
+ and WebRTC. This package provides a VoIP media traffic NAT traversal server
+ and gateway.
+ .
+ This implementation also includes some extra features.
+ .
+ Supported RFCs:
+ TURN specs:
+  * RFC 5766 - base TURN specs;
+  * RFC 6062 - TCP relaying TURN extension;
+  * RFC 6156 - IPv6 extension for TURN;
+  * Experimental DTLS support as client protocol.
+ STUN specs:
+  * RFC 5389 - base "new" STUN specs;
+  * RFC 5769 - test vectors for STUN protocol testing;
+  * RFC 5780 - NAT behavior discovery support.
+ .
+ The implementation fully supports UDP, TCP, TLS, and DTLS as protocols between
+ the TURN client and the TURN server. Both UDP and TCP relaying are supported.
+ .
+ Flat files, MySQL, PostgreSQL, or Redis are all supported for the user
+ repository (if authentication is required).
+ Both short-term and long-term credentials mechanisms are supported.
+ For WebRTC applications, the TURN server REST API for time-limited
+ secret-based authentication is implemented.
+ .
+ Load balancing can be implemented either by external networking tools, or by
+ the built-in ALTERNATE-SERVER mechanism.
+ .
+ The implementation is intended to be simple to install and configure.
+ The project focuses on performance, scalability, and simplicity.
+ The aim is to provide an enterprise-grade TURN solution.
+
